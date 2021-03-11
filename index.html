@@ -31,7 +31,7 @@
             </form>
             <div id="mainDiv">
                 <div class="row col-sm-5" v-if="result">found {{ (result != null)?result.totalItems:''}}</div>
-                <div class="row">
+                <div class="row" v-if="result">
                     <book-display v-for="(book, index) in result.items" :key="book.id" :book="JSON.stringify(book)"></book-display>
                 </div>
             </div>
